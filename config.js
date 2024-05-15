@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connect = mongoose.connect('mongodb://0.0.0.0:27017/userdata');
+const connect = mongoose.connect('mongodb+srv://amit:amit123@cluster0.w8nn4gk.mongodb.net/Users?retryWrites=true&w=majority&appName=Cluster0');
 connect.then(()=>{
     console.log('connect sucessfully');
 }).catch(err=>{
@@ -24,6 +24,6 @@ const loginSchema =({
 });
 
 // creating  to collection
-const collection = new mongoose.model("user",loginSchema);
+const collection = new mongoose.model("ip",loginSchema);
 module.exports = collection;
 
