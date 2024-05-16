@@ -15,7 +15,8 @@ const loginSchema =({
     },
     email:{
         type:String,
-        require:true
+        require:true,
+        unique:true
     },
     password:{
         type:String,
